@@ -1,6 +1,7 @@
 package models;
 
 public class Producto {
+    private int id;
     private String nombre;
     private String descripcion;
     private int cantidad;
@@ -10,8 +11,17 @@ public class Producto {
     public Producto() {
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     // Constructor con parámetros
-    public Producto(String nombre, String descripcion, int cantidad, double precio) {
+    public Producto(int id, String nombre, String descripcion, int cantidad, double precio) {
+        this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.cantidad = cantidad;
@@ -57,7 +67,8 @@ public class Producto {
     @Override
     public String toString() {
         return "Producto{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", cantidad=" + cantidad +
                 ", precio=" + precio +

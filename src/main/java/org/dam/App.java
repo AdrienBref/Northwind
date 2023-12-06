@@ -1,13 +1,12 @@
 package org.dam;
 
-/**
- * Hello world!
- *
- */
+import util.Initialize;
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Initialize initApp = new Initialize();
+        initApp.initMenu();
     }
+
 }
